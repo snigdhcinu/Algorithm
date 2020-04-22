@@ -1,0 +1,8 @@
+function confirmEnding(str, target) {
+  let index=(str.length-1)-target.length;
+  // From index+1 the target string begins.
+  let test=str.slice(index+1,str.length)
+  return (test===target);
+}
+
+confirmEnding("Bastian", "n");
