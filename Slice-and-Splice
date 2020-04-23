@@ -1,0 +1,12 @@
+function frankenSplice(arr1, arr2, n) {
+var result=new Array();
+result=arr2.slice(0,n);
+result.splice(result.length,1,...arr1);
+var rem=arr2.slice(n,arr2.length);
+result.splice(result.length,1,...rem);
+console.log(result)
+  return result;
+}
+
+ frankenSplice([1, 2, 3], [4, 5,6], 1);
+frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2)
