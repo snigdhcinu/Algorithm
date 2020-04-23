@@ -1,0 +1,11 @@
+function booWho(bool) {
+  // console.log(true===Boolean)
+return(typeof(bool)=='boolean')
+  return true;
+  return false;
+}
+
+booWho(null);
+booWho(true);
+
+// Note that comparison is made for string boolean, and not Boolean. 
