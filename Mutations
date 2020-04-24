@@ -1,0 +1,23 @@
+function mutation(arr) {
+  // Since case doesn't matter, so we convert all of the characters either to lower case or to upper case.
+  arr[0]=arr[0].toLowerCase();
+  // console.log(arr[0])  // test node 1
+  arr[1]=arr[1].toLowerCase();
+  // console.log(arr[1])  // test node 2
+  var match=0
+  for(let i=0;i<arr[1].length;i++)
+  {
+    for(let j=0;j<arr[0].length;j++)
+    {
+      if(arr[1][i]==arr[0][j]){
+      match++;
+      break;  // so that further comparision is stopped in case of a match, thus not increasing the value of the match more than once .
+      }
+    }
+  }
+  console.log(match==arr[1].length)
+  return(match==arr[1].length)
+}
+// Test cases.
+// mutation(["hello", "hey"])
+mutation(["hello", "Hello"]);
